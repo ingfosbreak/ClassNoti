@@ -1,4 +1,4 @@
-package com.App.classnotification.models;
+package com.App.classnotification.models.CSV;
 
 public interface DataSourceCSV <T>{
 

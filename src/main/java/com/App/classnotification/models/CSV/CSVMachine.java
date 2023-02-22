@@ -1,4 +1,4 @@
-package com.App.classnotification.models;
+package com.App.classnotification.models.CSV;
 
 import java.util.ArrayList;
 
@@ -20,6 +20,8 @@ public class CSVMachine implements DataSourceCSV<ArrayList<String>>{
 
 
 
+
+
     }
 
     public ArrayList<String> readData(){
@@ -28,7 +30,7 @@ public class CSVMachine implements DataSourceCSV<ArrayList<String>>{
         return stringStreams;
     }
 
-    public void writeData( ArrayList<String> stringStreams){
+    public void writeData( ArrayList<String> stringStreams ){
 
 
     }
