@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.classnotification.classnotification/com.classnotification.classnotification.HelloApplication
+                                com.App.classnotification/com.App.classnotification.HelloApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

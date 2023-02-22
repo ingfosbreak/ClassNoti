@@ -3,6 +3,6 @@ module com.classnotification.classnotification {
     requires javafx.fxml;
 
 
-    opens com.classnotification.classnotification to javafx.fxml;
-    exports com.classnotification.classnotification;
+    opens com.App.classnotification to javafx.fxml;
+    exports com.App.classnotification;
 }

@@ -1,4 +1,4 @@
-package com.classnotification.classnotification;
+package com.App.classnotification;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

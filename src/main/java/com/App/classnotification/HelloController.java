@@ -1,4 +1,4 @@
-package com.classnotification.classnotification;
+package com.App.classnotification;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
