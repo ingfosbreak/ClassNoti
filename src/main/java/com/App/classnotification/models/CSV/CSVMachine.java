@@ -52,8 +52,6 @@ public class CSVMachine implements DataSourceCSV<ArrayList<String>>{
 
         }
 
-
-
     }
 
     public ArrayList<String> readData(){
@@ -73,8 +71,10 @@ public class CSVMachine implements DataSourceCSV<ArrayList<String>>{
     }
 
     public static void main(String[] args) {
+
         CSVMachine test = new CSVMachine("Data/ak/ex.csv");
         System.out.println(test.filePath);
+
     }
 
 
