@@ -6,6 +6,7 @@ public interface DataSourceCSV <T>{
 
     void writeData(T t);
 
+    void writeHeader(String header);
     void clearData();
 
 }

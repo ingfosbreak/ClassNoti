@@ -3,7 +3,7 @@ package com.App.classnotification.models.CSV;
 import java.io.*;
 import java.util.ArrayList;
 
-public class CSVMachine implements DataSourceCSV<ArrayList<String>>{
+public class CSVMachine implements DataSourceCSV<ArrayList<ArrayList<String>>>{
 
     private String filePath;
 
@@ -53,8 +53,8 @@ public class CSVMachine implements DataSourceCSV<ArrayList<String>>{
 
     }
 
-    public ArrayList<String> readData(){
-        ArrayList<String> stringStreams = new ArrayList<>();
+    public ArrayList<ArrayList<String>> readData(){
+        ArrayList<ArrayList<String>> stringStreams = new ArrayList<ArrayList<String>>();
 
         File file = new File(this.filePath);
         FileReader reader = null;
@@ -64,10 +64,19 @@ public class CSVMachine implements DataSourceCSV<ArrayList<String>>{
             reader = new FileReader(file);
             buffer = new BufferedReader(reader);
 
+
+
             String line = "";
             while ( (line = buffer.readLine()) != null) {
-                stringStreams.add(line);
+                ArrayList<String> innerStringStreams = new ArrayList<>();
+                for ( String word : line.split(",")){
+                    innerStringStreams.add(word);
+                    stringStreams.add(innerStringStreams);
+                }
+
             }
+
+
 
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
@@ -88,8 +97,14 @@ public class CSVMachine implements DataSourceCSV<ArrayList<String>>{
     }
 
 
-    public void writeData( ArrayList<String> stringStreams ){
+    public void writeData( ArrayList<ArrayList<String>> stringStreams ){
 
+
+
+    }
+
+
+    public void writeHeader( String header ){
 
     }
 
@@ -101,9 +116,15 @@ public class CSVMachine implements DataSourceCSV<ArrayList<String>>{
     public static void main(String[] args) {
 
         CSVMachine test = new CSVMachine("Data/ingfosbreak/info.csv");
-        for (String word : test.readData()){
-            System.out.println(word);
-        }
+
+        System.out.println(test.readData());
+
+
+
+
+
+
+
 
     }
 
